@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to top, #1d3245, #f0f0f0, #f0f0f0);}
+.info-container {
+    width: 40%;
+    padding: 16px;
+    /* background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);*/
+    margin-right: 20px;
+    font-size: 20px; 
+}
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.login-container {
+    width: 400px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    margin-left: 10%; /* Adicionado para mover o container para a direita */
+}
+.login-container h2 {
+    text-align: center;
+}
+.login-container input {
+    width: 92%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.button {
+    width: 49%;
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 1s; /* Animação ao passar o mouse */
+}
+
+.button:hover {
+    background-color: #45a049; /* Cor ao passar o mouse */
+}
+.buttonL {
+    width: 98%;
+    background-color: #3c6178; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 1s; /* Animação ao passar o mouse */
+}
+

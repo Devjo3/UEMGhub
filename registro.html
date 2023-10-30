@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tela de Registro</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="fav.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Registro</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <input type="password" id="confirm_password" placeholder="Confirme a Senha">
+        <button class="buttonL" onclick="registrar()">Registrar</button>
+        <hr> <!-- Linha horizontal -->
+        
+        <div style="display: flex; justify-content: center; align-items: center;"> <!-- Div adicionada -->
+            <button class="button" onclick="window.location.href='index.html'">voltar</button>
+        </div> <!-- Fim da div adicionada -->
+    </div>
+
+    <script src="registro.js"></script>
+</body>
+</html>

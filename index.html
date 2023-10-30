@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="fav.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div class="info-container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h2>Bem-vindo à nossa rede social universitária!</h2>
+        <p>Aqui você pode se conectar com outros estudantes e professores, compartilhar projetos e muito mais.</p>
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário" autocomplete="username">
+        <input type="password" id="password" placeholder="Senha" autocomplete="current-password">
+        <button class="buttonL" onclick="login()">Entrar</button>
+        <div style="display: flex; justify-content: center; align-items: center;"> <!-- Div adicionada -->
+            <a href="redefinir_senha.html">Esqueceu a senha?</a> <!-- Link para redefinir a senha -->
+        </div> <!-- Fim da div adicionada -->
+        <hr> <!-- Linha horizontal -->
+        <div style="display: flex; justify-content: center; align-items: center;"> <!-- Div adicionada -->
+            <button class="button" onclick="window.location.href='registro.html'">Registrar</button>
+        </div> <!-- Fim da div adicionada -->
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
