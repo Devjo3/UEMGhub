@@ -3,18 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tela de Registro</title>
+    <title>Redefinir Senha</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="fav.ico" type="image/x-icon">
 </head>
 <body>
     <div class="login-container">
-        <h2>Registro</h2>
-        <input type="email" id="email" name="email" placeholder="Seu email">
-        <input type="text" id="username" placeholder="Usuário">
-        <input type="password" id="password" placeholder="Senha">
-        <input type="password" id="confirm_password" placeholder="Confirme a Senha">
-        <button class="buttonL" onclick="registrar()">Registrar</button>
+        <h2>Redefinir Senha</h2>
+        <input type="email" id="email" placeholder="Email" autocomplete="email">
+        <input type="password" id="password" placeholder="Senha" autocomplete="current-password">
+        <button class="buttonL" onclick="resetPassword()">Redefinir Senha</button>
         <hr> <!-- Linha horizontal -->
         
         <div style="display: flex; justify-content: center; align-items: center;"> <!-- Div adicionada -->
@@ -22,6 +20,6 @@
         </div> <!-- Fim da div adicionada -->
     </div>
 
-    <script src="registro.js"></script>
+    <script src="reset.js"></script>
 </body>
 </html>

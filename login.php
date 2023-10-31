@@ -6,10 +6,10 @@ function calcularHash($password, $salt) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM usuarios WHERE username='$username'";
+    $sql = "SELECT * FROM usuarios WHERE email='$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -17,11 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (calcularHash($password, $row["salt"]) == $row["password_hash"]) {
                 echo "Login bem sucedido!";
             } else {
-                echo "Usuário ou senha incorretos!";
+                echo "Email ou senha incorretos!";
             }
         }
     } else {
-        echo "Usuário ou senha incorretos!";
+        echo "Email ou senha incorretos!";
     }
 }
 

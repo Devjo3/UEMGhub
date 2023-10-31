@@ -1,9 +1,9 @@
 function login() {
-    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
 
-    if(username == '' || password == '') {
-        alert('O campo de usuário ou senha está vazio!');
+    if(email == '' || password == '') {
+        alert('O campo de email ou senha está vazio!');
         return false;
     }
 
@@ -13,9 +13,15 @@ function login() {
 
     xhr.onreadystatechange = function() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            alert(this.responseText);
+            // Verifica se a resposta do servidor é "Email ou senha incorretos!"
+            if(this.responseText.trim() !== "Email ou senha incorretos!") {
+                // Redireciona para a página feed.html
+                window.location.href = 'feed.html';
+            } else {
+                alert(this.responseText);
+            }
         }
     }
 
-    xhr.send("username=" + username + "&password=" + password);
+    xhr.send("email=" + email + "&password=" + password);
 }
