@@ -15,6 +15,8 @@ function login() {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
             // Verifica se a resposta do servidor é "Email ou senha incorretos!"
             if(this.responseText.trim() !== "Email ou senha incorretos!") {
+                // Adiciona a variável ao localStorage quando o login for bem sucedido
+                localStorage.setItem('loggedIn', 'true');
                 // Redireciona para a página feed.html
                 window.location.href = 'feed.html';
             } else {

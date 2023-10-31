@@ -1,4 +1,5 @@
 <?php
+session_start(); // Inicia a sessão no início do arquivo
 include 'conexao.php';
 
 function calcularHash($password, $salt) {
@@ -15,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             if (calcularHash($password, $row["salt"]) == $row["password_hash"]) {
+                $_SESSION['loggedin'] = true; // Adiciona a variável de sessão quando o login for bem sucedido
                 echo "Login bem sucedido!";
             } else {
                 echo "Email ou senha incorretos!";

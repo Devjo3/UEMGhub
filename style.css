@@ -20,6 +20,14 @@ body {
     margin-right: auto;
     width: 50%;
 }
+
+.logoFeed {
+    display: block;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    width: 120px;
+}
 .login-container {
     width: 400px;
     padding: 16px;
@@ -46,7 +54,7 @@ body {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     font-size: 16px;
     transition-duration: 1s; /* Animação ao passar o mouse */
 }
@@ -62,8 +70,54 @@ body {
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline;
     font-size: 16px;
     transition-duration: 1s; /* Animação ao passar o mouse */
 }
 
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Cor de fundo do header */
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav ul li a {
+    background-color: #f0f0f0;
+    border: none;
+    color: #3c6178; /* Cor do texto */
+    padding: 40px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    transition-duration: 0.2s; /* Animação ao passar o mouse */
+}
+
+nav ul li a:hover {
+    background-color: #3c6178; /* Cor ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+}
+.feed-container {
+    width: 80%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
