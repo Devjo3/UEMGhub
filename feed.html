@@ -8,22 +8,42 @@
     <link rel="icon" href="fav.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav>
-          <ul>
-            <a href="#"><img class="logoFeed" src="logo.png" alt="UEMG HUB"></a>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#">Busca</a></li>
-            <li><a href="index.html" id="logout">Sair</a></li>
-        </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <a href="#"><img class="logoFeed" src="logo.png" alt="UEMG HUB"></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Busca</a></li>
+        <li><a href="#" onclick="openModal()">Chat</a></li> <!-- Botão para abrir a modal do chat -->
+        <li><a href="index.html" id="logout">Sair</a></li>
+      </ul>
+    </nav>
+  </header>  
+  
+    <div class="grid-container">
+      <div class="grid-item menu">Menu</div>
+      <div class="grid-item feed">Feed</div>
+      <div class="grid-item ads">Anúncios</div>
+  </div>
 
-    <div class="feed-container">
-        <!-- O feed será inserido aqui pelo JavaScript -->
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content" id="chat-box">
+      <div id="chat-header">
+        Chat
+        <button id="minimize-button" onclick="closeModal()">X</button>
       </div>
+      <div id="chat-messages"></div>
+      <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+      <button onclick="sendMessage()">Enviar</button>
+    </div>
+  </div>
 
+
+
+    <script src="scripts.js">
+    </script>
     <script src="feed.js">
     </script>
 
