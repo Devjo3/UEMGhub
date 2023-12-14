@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         while($row = $result->fetch_assoc()) {
             if (calcularHash($password, $row["salt"]) == $row["password_hash"]) {
                 $_SESSION['loggedin'] = true; // Adiciona a variável de sessão quando o login for bem sucedido
+                $_SESSION['user_id'] = $row['id']; // Adiciona o ID do usuário na sessão
                 echo "Login bem sucedido!";
             } else {
                 echo "Email ou senha incorretos!";

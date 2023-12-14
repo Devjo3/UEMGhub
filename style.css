@@ -204,13 +204,14 @@ nav ul li a:last-child {
 #chat-box {
     width: 300px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 0px;
+    right: 0px;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     z-index: 9999; /* Certifique-se de que está acima de outros elementos, se necessário */
-    background-color: white; /* Cor de fundo do chat box */
+    background-color: #3c6178; /* Cor de fundo */
+
 }
 
 #chat-messages {
@@ -218,23 +219,43 @@ nav ul li a:last-child {
     overflow-y: scroll;
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
-    display: block; /* Garanta que inicialmente o chat-messages esteja visível */
-
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px; /* Adicionando preenchimento interno */
+    margin: 10px; /* Adicionando margem externa */
 }
 
 #message-input {
+    border-radius: 5px;
     width: 70%;
     padding: 5px;
     margin-right: 5px;
 }
 
 button {
+    border-radius: 5px;
     padding: 5px 10px;
 }
 .hidden {
     display: none;
 }
+#chat-header {
+    background-color: #3c6178; /* Cor de fundo da div */
+    color: white; /* Cor do texto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
 
+  #minimize-button {
+    background-color: transparent; /* Fundo transparente */
+    border: none;
+    color: white; /* Cor do texto */
+    font-size: 16px;
+    cursor: pointer;
+  }
 .modal {
     display: none;
     position: fixed;
